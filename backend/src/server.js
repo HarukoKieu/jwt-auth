@@ -20,6 +20,7 @@ app.use(helmet());
 
 // Middleware
 app.use(express.json());
+
 app.use(cookieParser());
 app.use(
   cors({
@@ -45,7 +46,7 @@ if (process.env.NODE_ENV === "production") {
 }
 
 connectDB().then(() => {
-  app.listen(PORT, () => {
+  app.listen(8000, () => {
     console.log(`Server is running on port ${PORT}`);
   });
 });
